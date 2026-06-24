@@ -1,0 +1,17 @@
+# Code for checking
+----------------------------------
+import matplotlib.pyplot as plt
+import seaborn as sns
+-----------------------------------
+# Confusion matrix
+-----------------------------------
+sns.heatmap(cm, annot=True, fmt=".1f", cmap="YlGnBu")
+plt.title("Confusion Matrix")
+plt.xlabel("Predicted")
+plt.ylabel("Actual")
+plt.savefig("results/confusion_matrix.png")   # Save to results folder
+plt.close()
+-----------------------------------
+# For Accuracy 
+with open("results/metrics.txt", "w") as f:
+    f.write(f"Model Accuracy: {acc:.4f}\n"
